@@ -1,51 +1,19 @@
-# unblibraries/drupal [![](https://images.microbadger.com/badges/image/unblibraries/drupal:alpine-nginx-php7-8.x.svg)](http://microbadger.com/images/unblibraries/drupal:alpine-nginx-php7-8.x "Get your own image badge on microbadger.com") [![Build Status](https://travis-ci.org/unb-libraries/docker-drupal.svg?branch=alpine-nginx-php7-8.x)](https://travis-ci.org/unb-libraries/docker-drupal)
+# Branch Deprecated
+Oh no!
 
-A lightweight extensible Drupal docker image, suitable for a development-to-production workflow.
+## Notice
+Use of this branch (_alpine-nginx-php7-8.x_) and docker image (_unblibraries/drupal:alpine-nginx-php7-8.x_) is deprecated. Development has halted, and updates will not continue. At the time of deprecation, this branch was functional - but may be unstable.
 
-## Quick Start
-This image does not contain a database (MySQL) server, although the [docker-compose.yml](https://github.com/unb-libraries/docker-drupal/blob/alpine-nginx-php7-8.x/docker-compose.yml) file provided for convenience will deploy Drupal with a MySQL server with no additional configuration required. Looking for a really quick start?
+## Background
+Organic development led to this image being previously available in numerous configurations and formats, which became a tremendous maintenance burden. As of June 1 2017, there is currently only one supported branch - [unblibraries/drupal:alpine-nginx-php7-8.x](https://github.com/unb-libraries/docker-drupal/tree/alpine-nginx-php7-8.x). All other branches have been deprecated and will not be updated. They will most likely become broken!
 
-```
-git clone -b alpine-nginx-php7-8.x git@github.com:unb-libraries/docker-drupal.git docker-drupal
-cd docker-drupal
-docker-compose up -d; docker-compose logs
-```
+## Actions to Take
+Any references should be replaced ASAP with [unblibraries/drupal:alpine-nginx-php7-8.x-composer](https://github.com/unb-libraries/docker-drupal/tree/alpine-nginx-php7-8.x-composer), or [the Official Drupal docker image](https://hub.docker.com/_/drupal/). In either case, reconfiguration of your dependent image will be necessary.
 
-And that's it! Don't have docker/docker-compose installed? See the [wiki pages](https://github.com/unb-libraries/docker-drupal/wiki/2.-Setting-Up-Prerequisites). New to Docker? Completely lost and not sure where to start? Check out the [unblibraries/drupal Wiki](https://github.com/unb-libraries/docker-drupal/wiki) for detailed instructions on deploying a local Drupal instance.
+If you wish to contribute to revive this branch or maintain these other configurations, please contact the maintainers at libsystems@unb.ca.
 
-## How To Use
-This image offers little benefit on its own, and shines when serving as the base of an extension. Although little documentation exists, [an example of how we extend this image for a production site](https://github.com/unb-libraries/loyalistresearchnet.org) should provide enough for you to get started.
+## Deprecation Date
+This branch **will be deleted and the image removed from DockerHub on June 1, 2017**.
 
-## Repository Tags
-This image was previously available in many configurations and formats, which became a tremendous maintenance burden.There is currently only two supported branches - both Drupal 8 and PHP7. One uses makefiles to build the Drupal repo (may be deprecated), the other Composer.
-
-The other branches have been deprecated and will not be updated. They will most likely become broken! If you wish to contribute to the project and maintain these other configurations, please contact us.
-
-
-|                    Tag                    | Drupal | PHP   | Size                                                                                                                                                                                               | Status                                                                                                                                                    |
-|:-----------------------------------------:|--------|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| unblibraries/drupal:alpine-nginx-php7-8.x |   8.x  | 7.0.x | [![](https://images.microbadger.com/badges/image/unblibraries/drupal:alpine-nginx-php7-8.x.svg)](http://microbadger.com/images/unblibraries/drupal:alpine-nginx-php7-8.x "Get your own image badge on microbadger.com") | [![Build Status](https://travis-ci.org/unb-libraries/docker-drupal.svg?branch=alpine-nginx-php7-8.x)](https://travis-ci.org/unb-libraries/docker-drupal) |
-| unblibraries/drupal:alpine-nginx-php7-8.x-composer |   8.x  | 7.0.x | [![](https://images.microbadger.com/badges/image/unblibraries/drupal:alpine-nginx-php7-8.x-composer.svg)](http://microbadger.com/images/unblibraries/drupal:alpine-nginx-php7-8.x-composer "Get your own image badge on microbadger.com") | [![Build Status](https://travis-ci.org/unb-libraries/docker-drupal.svg?branch=alpine-nginx-php7-8.x-composer)](https://travis-ci.org/unb-libraries/docker-drupal) |
-
-
-## General Use
-```
-docker run \
-       --rm \
-       --name drupal \
-       -e MYSQL_HOSTNAME= \
-       -e MYSQL_PORT= \
-       -e MYSQL_ROOT_PASSWORD= \
-       -v /local/dir:/app/html \
-       -p 80:80 \
-       unblibraries/drupal:alpine-nginx-php7-8.x
-```
-
-## Other Runtime/Environment Variables
-Full documentation of environment variables is [available in the wiki](https://github.com/unb-libraries/docker-drupal/wiki/C.-Environment-Variables).
-
-## License
-- unblibraries/drupal is licensed under the MIT License:
-  - [http://opensource.org/licenses/mit-license.html](http://opensource.org/licenses/mit-license.html)
-- Attribution is not required, but much appreciated:
-  - `Drupal Docker Image by UNB Libraries`
+## Contact Information
+If you have any questions, or critiques, please contact the maintainers at libsystems@unb.ca.
